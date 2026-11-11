@@ -18,7 +18,8 @@ const body = Geist({
 const titulo = `${site.nome} | ${site.titulo}`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
+  // Só o domínio: o Next já acrescenta o basePath (/portfolio) às imagens.
+  metadataBase: new URL(new URL(site.url).origin),
   title: titulo,
   description: site.descricao,
   openGraph: {
