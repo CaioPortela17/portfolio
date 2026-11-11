@@ -18,7 +18,7 @@ export function ThemeToggle() {
       type="button"
       onClick={alternar}
       aria-label="Alternar entre tema claro e escuro"
-      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface text-fg transition-colors hover:border-accent hover:text-accent"
+      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface text-fg transition duration-150 hover:border-accent hover:text-accent active:scale-95"
     >
       <IconSun className="hidden dark:block" />
       <IconMoon className="block dark:hidden" />

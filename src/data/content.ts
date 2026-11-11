@@ -42,6 +42,12 @@ export const hero = {
 export const sobre = {
   titulo: "Sobre",
   foto: "/foto.jpg", // arquivo em public/foto.jpg
+  fatos: [
+    { rotulo: "Graduação", valor: "Ciência da Computação · UNIFOR · 3º semestre" },
+    { rotulo: "Formação", valor: "Full Stack Developer · Digital College" },
+    { rotulo: "Atuação", valor: "Freelancer desde mai/2026" },
+    { rotulo: "Produto no ar", valor: "Satisfeito, pesquisa de satisfação" },
+  ],
   texto:
     "Estudante do 3º semestre de Ciência da Computação na UNIFOR e da Formação Full Stack Developer na Digital College. Desde maio de 2026, desenvolvo sites institucionais e landing pages como freelancer para empresas, do levantamento de requisitos à entrega. Também criei o Satisfeito, uma plataforma de pesquisa de satisfação que já está no mercado. Estou em busca de um estágio em TI para aplicar o que já sei e continuar evoluindo.",
 };
@@ -109,7 +115,7 @@ export const formacao = [
   {
     curso: "Bacharelado em Ciência da Computação",
     instituicao: "UNIFOR",
-    periodo: "ago/2025 – hoje",
+    periodo: "ago/2025 – jun/2029 (previsto)",
   },
   {
     curso: "Formação Full Stack Developer",
@@ -127,7 +133,8 @@ export const tecnologias = [
 
 export const contato = {
   titulo: "Contato",
-  texto: "Vamos conversar? Estou aberto a oportunidades de estágio e projetos.",
+  chamada: "Vamos conversar?",
+  texto: "Estou aberto a oportunidades de estágio e a novos projetos.",
   botaoEmail: "Enviar e-mail",
   rodape: "© 2026 Caio Portela",
 };
