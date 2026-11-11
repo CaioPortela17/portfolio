@@ -59,9 +59,7 @@ export function Header() {
                 alt=""
                 width={96}
                 height={96}
-                className="h-full w-full object-cover object-[34%_18%] scale-[1.6] origin-[34%_22%]"
-                style={{ filter: "url(#duotone)" }}
-              />
+                className="h-full w-full object-cover object-[34%_18%] scale-[1.6] origin-[34%_22%]"              />
             </span>
             <span>{site.nome}</span>
           </a>

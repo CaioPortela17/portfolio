@@ -163,17 +163,6 @@ h1 .line-mask {
   transform: none;
 }
 
-/* ───────── Retrato: duotone → cor ao passar o mouse ───────── */
-.retrato-cor {
-  opacity: 0;
-  transition: opacity 0.6s var(--ease-out);
-}
-@media (hover: hover) and (pointer: fine) {
-  .retrato:hover .retrato-cor {
-    opacity: 1;
-  }
-}
-
 @keyframes pulse-dot {
   0%,
   100% {
@@ -213,7 +202,6 @@ h1 .line-mask {
   .dot-live {
     animation: none;
   }
-  .retrato-cor,
   .frame-img {
     transition: none;
   }

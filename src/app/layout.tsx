@@ -62,20 +62,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </noscript>
       </head>
       <body>
-        {/* Filtro duotone (sombras azul-marinho → luzes azul-céu) usado no retrato */}
-        <svg width="0" height="0" aria-hidden className="absolute">
-          <filter id="duotone" colorInterpolationFilters="sRGB">
-            <feColorMatrix
-              type="matrix"
-              values="0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0 0 0 1 0"
-            />
-            <feComponentTransfer>
-              <feFuncR type="table" tableValues="0.03 0.78" />
-              <feFuncG type="table" tableValues="0.08 0.88" />
-              <feFuncB type="table" tableValues="0.18 1" />
-            </feComponentTransfer>
-          </filter>
-        </svg>
         {children}
       </body>
     </html>
