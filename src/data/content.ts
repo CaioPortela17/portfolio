@@ -51,7 +51,7 @@ export type Projeto = {
   destaque?: boolean;
   descricao: string;
   tags: string[];
-  /** Caminho em /public (ex.: "/projetos/satisfeito.png"). Se o arquivo não existir, aparece um gradiente com o nome. */
+  /** Caminho em /public (ex.: "/projetos/satisfeito.jpg"). Se o arquivo não existir, aparece um gradiente com o nome. */
   imagem: string;
   links: { rotulo: string; url: string }[];
 };
@@ -63,7 +63,7 @@ export const projetos: Projeto[] = [
     descricao:
       "Plataforma de pesquisa de satisfação para empresas, já no mercado. O cliente responde pelo celular via QR code, sem criar conta, em menos de 30 segundos. A empresa acompanha NPS, gráficos e um relatório da equipe gerado por IA. Autenticação e banco no Supabase com Row Level Security, proteção contra bots com Cloudflare Turnstile, deploy na Vercel com CI no GitHub Actions.",
     tags: ["Next.js", "React", "TypeScript", "Tailwind", "Supabase", "Claude API"],
-    imagem: "/projetos/satisfeito.png",
+    imagem: "/projetos/satisfeito.jpg",
     links: [
       { rotulo: "Site", url: "https://satisfeito.vercel.app" },
       { rotulo: "Vitrine", url: "https://github.com/CaioPortela17/satisfeito-portfolio" },
@@ -74,7 +74,7 @@ export const projetos: Projeto[] = [
     descricao:
       "Site em React que consome a API pública FreeToGame, com busca, filtros e rotas dinâmicas.",
     tags: ["React", "Vite", "JavaScript"],
-    imagem: "/projetos/catalogo-jogos.png",
+    imagem: "/projetos/catalogo-jogos.jpg",
     links: [
       { rotulo: "Site", url: "https://react-g.onrender.com" },
       { rotulo: "Código", url: "https://github.com/CaioPortela17/catalogo-jogos-react" },
@@ -85,7 +85,7 @@ export const projetos: Projeto[] = [
     descricao:
       "Jogo educativo web sobre conjuntos e Diagrama de Venn para o ensino médio, desenvolvido na UNIFOR.",
     tags: ["HTML", "JavaScript"],
-    imagem: "/projetos/cartografo-de-venn.png",
+    imagem: "/projetos/cartografo-de-venn.jpg",
     links: [
       { rotulo: "Jogar", url: "https://caioportela17.github.io/o-cartagrafo-de-venn/" },
       { rotulo: "Código", url: "https://github.com/CaioPortela17/o-cartagrafo-de-venn" },
