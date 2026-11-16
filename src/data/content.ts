@@ -71,7 +71,7 @@ export const projetos: Projeto[] = [
     tags: ["Next.js", "React", "TypeScript", "Tailwind", "Supabase", "Claude API"],
     imagem: "/projetos/satisfeito.jpg",
     links: [
-      { rotulo: "Site", url: "https://satisfeito.vercel.app" },
+      { rotulo: "Site", url: "https://meusatisfeito.com.br" },
       { rotulo: "Vitrine", url: "https://github.com/CaioPortela17/satisfeito-portfolio" },
     ],
   },
