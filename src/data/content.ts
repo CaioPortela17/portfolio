@@ -19,34 +19,47 @@ export const links = {
   github: "https://github.com/CaioPortela17",
   linkedin: "https://www.linkedin.com/in/caio-portela-9303003a7/",
   curriculo: `${base}/Caio_Portela_Curriculo.pdf`,
+  /** Número no formato internacional, só dígitos (55 + DDD + número). */
+  whatsapp: `https://wa.me/5585991522923?text=${encodeURIComponent(
+    "Oi, Caio! Vi seu portfólio e queria conversar.",
+  )}`,
+  whatsappRotulo: "(85) 99152-2923",
 };
 
-export const nav = [
-  { id: "inicio", rotulo: "Início" },
-  { id: "sobre", rotulo: "Sobre" },
-  { id: "projetos", rotulo: "Projetos" },
-  { id: "experiencia", rotulo: "Experiência" },
-  { id: "formacao", rotulo: "Formação" },
-  { id: "tecnologias", rotulo: "Tecnologias" },
-  { id: "contato", rotulo: "Contato" },
+/**
+ * O site é um álbum: cada seção é uma faixa do Lado A ou do Lado B.
+ * O `id` precisa bater com o id da seção na página.
+ */
+export type Faixa = { id: string; lado: "A" | "B"; codigo: string; rotulo: string };
+
+export const faixas: Faixa[] = [
+  { id: "inicio", lado: "A", codigo: "A1", rotulo: "Abertura" },
+  { id: "sobre", lado: "A", codigo: "A2", rotulo: "Sobre" },
+  { id: "projetos", lado: "A", codigo: "A3", rotulo: "Projetos" },
+  { id: "experiencia", lado: "B", codigo: "B1", rotulo: "Experiência" },
+  { id: "formacao", lado: "B", codigo: "B2", rotulo: "Formação" },
+  { id: "tecnologias", lado: "B", codigo: "B3", rotulo: "Tecnologias" },
+  { id: "contato", lado: "B", codigo: "B4", rotulo: "Contato" },
 ];
 
 export const hero = {
   selo: "Disponível para estágio",
-  subtitulo: "Desenvolvedor Web · Estudante de Ciência da Computação",
+  subtitulo: "Desenvolvedor web e estudante de Ciência da Computação",
   frase: "Construo produtos web reais, do levantamento de requisitos à entrega.",
   botaoProjetos: "Ver projetos",
   botaoCurriculo: "Baixar currículo",
+  botaoWhatsapp: "Chamar no WhatsApp",
 };
 
 export const sobre = {
   titulo: "Sobre",
   foto: "/foto.jpg", // arquivo em public/foto.jpg
   fatos: [
-    { rotulo: "Graduação", valor: "Ciência da Computação · UNIFOR · 3º semestre" },
-    { rotulo: "Formação", valor: "Full Stack Developer · Digital College" },
+    { rotulo: "Graduação", valor: "Ciência da Computação, UNIFOR, 3º semestre" },
+    { rotulo: "Formação", valor: "Full Stack Developer, Digital College" },
     { rotulo: "Atuação", valor: "Freelancer desde mai/2026" },
     { rotulo: "Produto no ar", valor: "Satisfeito, pesquisa de satisfação" },
+    { rotulo: "Fora do código", valor: "Música e video game" },
   ],
   texto:
     "Estudante do 3º semestre de Ciência da Computação na UNIFOR e da Formação Full Stack Developer na Digital College. Desde maio de 2026, desenvolvo sites institucionais e landing pages como freelancer para empresas, do levantamento de requisitos à entrega. Também criei o Satisfeito, uma plataforma de pesquisa de satisfação que já está no mercado. Estou em busca de um estágio em TI para aplicar o que já sei e continuar evoluindo.",
@@ -124,17 +137,18 @@ export const formacao = [
   },
 ];
 
+/** Cada tecnologia vira um pad tocável. A `cor` é uma das variáveis do tema. */
 export const tecnologias = [
-  { grupo: "Linguagens", itens: ["JavaScript", "TypeScript", "Java", "SQL"] },
-  { grupo: "Front-end", itens: ["React", "Next.js", "Tailwind", "HTML", "CSS"] },
-  { grupo: "Back-end", itens: ["Node.js", "APIs REST", "Supabase"] },
-  { grupo: "Ferramentas", itens: ["Git", "GitHub", "Pacote Office"] },
+  { grupo: "Linguagens", cor: "var(--rosa)", itens: ["JavaScript", "TypeScript", "Java", "SQL"] },
+  { grupo: "Front-end", cor: "var(--manga)", itens: ["React", "Next.js", "Tailwind", "HTML", "CSS"] },
+  { grupo: "Back-end", cor: "var(--lagoa)", itens: ["Node.js", "APIs REST", "Supabase"] },
+  { grupo: "Ferramentas", cor: "var(--lilas)", itens: ["Git", "GitHub", "Pacote Office"] },
 ];
 
 export const contato = {
   titulo: "Contato",
   chamada: "Vamos conversar?",
-  texto: "Estou aberto a oportunidades de estágio e a novos projetos.",
+  texto: "Estou aberto a oportunidades de estágio e a novos projetos. O jeito mais rápido é o WhatsApp.",
   botaoEmail: "Enviar e-mail",
   rodape: "© 2026 Caio Portela",
 };

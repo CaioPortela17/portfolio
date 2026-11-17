@@ -1,16 +1,24 @@
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Geist } from "next/font/google";
+import { Bowlby_One, Instrument_Sans, Pixelify_Sans } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/content";
 
-const display = Bricolage_Grotesque({
+// Títulos com cara de capa de disco, texto limpo e um toque de video game nos detalhes.
+const display = Bowlby_One({
   variable: "--f-display",
+  weight: "400",
   subsets: ["latin"],
   display: "swap",
 });
 
-const body = Geist({
+const body = Instrument_Sans({
   variable: "--f-body",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const pixel = Pixelify_Sans({
+  variable: "--f-pixel",
   subsets: ["latin"],
   display: "swap",
 });
@@ -38,32 +46,21 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#08111f" },
-    { media: "(prefers-color-scheme: light)", color: "#f3f6fb" },
-  ],
+  themeColor: "#1a1026",
 };
-
-// Define o tema antes da pintura para evitar "flash". Padrão: escuro.
-const temaInicial = `try{var t=localStorage.getItem("tema");document.documentElement.dataset.theme=t==="light"?"light":"dark"}catch(e){document.documentElement.dataset.theme="dark"}`;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="pt-BR"
-      data-theme="dark"
-      suppressHydrationWarning
-      className={`${display.variable} ${body.variable} antialiased`}
+      className={`${display.variable} ${body.variable} ${pixel.variable} antialiased`}
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: temaInicial }} />
         <noscript>
           <style>{`.reveal{opacity:1!important;transform:none!important}.mask-in>span{transform:none!important}`}</style>
         </noscript>
       </head>
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
